@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <ul class="nav-list">
+          <li>
+            <a href="#"><img src="../images/logo.jpg" alt="" /></a>
+          </li>
+          <li>
+            <button class="nav_button">Kirish</button>
+            <button class="nav_subbutton">Ro'yxatdan o'tish</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="register_box">
+      <div class="container">
+        <form action="" id="registerForm">
+          <h3 class="form_title">Ro'yxatdan o'tish</h3>
+          <p>
+            Barcha harjatlar va daromadlaringizni bir joyda kuzatib borish uchun
+            hoziroq ro'yxatdan o'ting
+          </p>
+          <label for="email">Elektron Pochta</label>
+          <input
+            id="email"
+            type="text"
+            required
+            placeholder="Ex:abc@example.com"
+          />
+          <label for="paswword">Parol</label>
+          <input
+            id="password"
+            type="password"
+            required
+            placeholder="********"
+          />
+          <label for="username">Faydalanuvchi nomi</label>
+          <input
+            id="username"
+            type="text"
+            required
+            placeholder="Ex: Sadio Mane"
+          />
+          <button class="register_button">Ro'yxatdan o'tish</button>
+          <p class="form_footer">
+            Accountingiz bormi? <a href="./login.html">Kirish</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script>
+      const regiterForm = document.querySelector("#registerForm");
+      const password = document.querySelector("#password");
+      const email = document.querySelector("#email");
+      regiterForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (
+          localStorage.getItem("email") !== email.value &&
+          localStorage.getItem("username") !== username.value
+        ) {
+          let emailLog = localStorage.setItem("email", email.value);
+          let passwordLog = localStorage.setItem("password", password.value);
+          window.location.href = ("login.html")
+        } else{
+          alert("Bu email yoki Username oldin foydanilgan")
+        }
+      });
+    </script>
+  </body>
+</html>
