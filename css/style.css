@@ -7,6 +7,10 @@
   width: 1140px;
   margin: 0 auto;
 }
+body {
+  /* background-color: cornflowerblue; */
+  background: linear-gradient(90deg, blue, red);
+}
 ul {
   list-style: none;
 }
@@ -31,6 +35,9 @@ ul {
   cursor: pointer;
 }
 
+#registerForm {
+  background: linear-gradient(90deg, rgb(5, 5, 137), rgb(152, 3, 3));
+}
 .nav_subbutton {
   background-color: transparent;
   border: 1px solid rgb(38, 38, 130);
@@ -45,6 +52,17 @@ ul {
   cursor: pointer;
 }
 
+.register_box form {
+  padding: 5px;
+  box-shadow: 5px 5px -5px 5px grey;
+}
+
+.form_title,
+input,
+button {
+  padding: 5px;
+  margin: 0 auto;
+}
 .register_box .container {
   display: flex;
   align-items: center;
@@ -82,7 +100,8 @@ input {
 }
 
 form button {
-  width: 320px;
+  width: 100px;
+  margin: 0 auto;
   padding: 15px 20px;
   background-color: cornflowerblue;
   border-radius: 15px;
@@ -100,7 +119,6 @@ form button {
   font-size: 16px;
   margin-left: 60px;
 }
-
 
 form a {
   margin-left: 15px;
